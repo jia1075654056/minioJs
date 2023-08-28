@@ -29,22 +29,22 @@ const Minio = require("minio");
 // );
 // };
 
-const initMinio = (MinioConfig) => {
+export function initMinio(MinioConfig) {
   if (!MinioConfig) {
     throw new Error("MinioConfig is error!");
   }
-
+  console.log("init");
   return new Minio.Client(MinioConfig);
-};
+}
 
-const putObject = ({
+export function putObject({
   minioClient,
   bucketNmae,
   file,
   fileName,
   size,
   callback,
-}) => {
+}) {
   const fileStream = Buffer.from(file);
   minioClient.putObject(
     bucketNmae,
@@ -59,9 +59,9 @@ const putObject = ({
         console.log("Success", objInfo);
       }
   );
-};
+}
 
-module.exports = {
-  initMinio,
-  putObject,
-};
+// module.exports = {
+//   initMinio,
+//   putObject,
+// };
