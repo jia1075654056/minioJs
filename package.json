@@ -1,6 +1,6 @@
 {
   "name": "@jmm-api/minio-js2",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "description": "",
   "main": "dist/minio-js.js",
   "scripts": {
