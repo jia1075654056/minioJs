@@ -29,7 +29,7 @@ const Minio = require("minio");
 // );
 // };
 
-export function initMinio(MinioConfig) {
+function initMinio(MinioConfig) {
   if (!MinioConfig) {
     throw new Error("MinioConfig is error!");
   }
@@ -37,7 +37,7 @@ export function initMinio(MinioConfig) {
   return new Minio.Client(MinioConfig);
 }
 
-export function putObject({
+function putObject({
   minioClient,
   bucketNmae,
   file,
@@ -61,7 +61,7 @@ export function putObject({
   );
 }
 
-// module.exports = {
-//   initMinio,
-//   putObject,
-// };
+module.exports = {
+  initMinio,
+  putObject,
+};
