@@ -1,4 +1,6 @@
 // const Minio = require("./minio-js");
-const Buffer = require("buffer");
+// const Buffer = require("buffer");
 
-module.exports = { Buffer };
+const bufferFrom = Buffer.from;
+
+module.exports = { bufferFrom };
