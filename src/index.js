@@ -1,33 +1,35 @@
 const Minio = require("minio");
-// const Fs = require("fs");
+const Fs = require("fs");
 
-// const MinioConfig = {
-//   endPoint: "192.168.199.200",
-//   port: 9000,
-//   useSSL: false,
-//   accessKey: "AA0wKk8iKGU0q5OV9X2M",
-//   secretKey: "M8d0zKr4FsKJG3DC6A3SScE2AjjAGVM8uUBLmcUB",
-// };
+const MinioConfig = {
+  endPoint: "192.168.199.200",
+  port: 9000,
+  useSSL: false,
+  accessKey: "AA0wKk8iKGU0q5OV9X2M",
+  secretKey: "M8d0zKr4FsKJG3DC6A3SScE2AjjAGVM8uUBLmcUB",
+};
 
-// const test = () => {
-//   const minioClient = new Minio.Client(MinioConfig);
-//   const fileStream = Fs.readFile(`${__dirname}/jdk_8.0.1310.11_64.exe`);
-//   // console.log(fileStream);
-//   console.log(fileStream);
-// const fileName = "jdk_8.0.1310.11_64.exe";
+const test = () => {
+  const minioClient = new Minio.Client(MinioConfig);
+  console.log(Fs.readFile)
+  const fileStream = Fs.readFileSync(`${__dirname}/banner.jpg`);
+  console.log(fileStream);
+  const fileName = "banner.jpg";
 
-// minioClient.putObject(
-//   "app-store",
-//   fileName,
-//   fileStream,
-//   function (err, objInfo) {
-//     if (err) {
-//       return console.log(err); // err should be null
-//     }
-//     console.log("Success", objInfo);
-//   }
-// );
-// };
+  minioClient.putObject(
+    "app-store",
+    fileName,
+    fileStream,
+    function (err, objInfo) {
+      if (err) {
+        return console.log(err); // err should be null
+      }
+      console.log("Success", objInfo);
+    }
+  );
+};
+
+// test();
 
 // function initMinio(MinioConfig) {
 //   if (!MinioConfig) {
@@ -61,8 +63,10 @@ const Minio = require("minio");
 //   );
 // }
 
-module.exports = {
-  // initMinio,
-  // putObject,
-  Minio
-};
+// module.exports = {
+//   // initMinio,
+//   // putObject,
+//   Minio
+// };
+
+module.exports = test
