@@ -10,6 +10,9 @@
     "type": "git",
     "url": "git+https://github.com/jia1075654056/miniojs.git"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "author": "jia1075654056",
   "license": "MIT",
   "bugs": {
