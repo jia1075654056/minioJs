@@ -1,6 +1,6 @@
 {
-  "name": "@jmm/minio-js",
-  "version": "0.0.1",
+  "name": "@jmm-api/minio-js2",
+  "version": "1.0.0",
   "description": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
