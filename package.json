@@ -2,8 +2,10 @@
   "name": "@jmm-api/minio-js2",
   "version": "1.0.2",
   "description": "",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -17,5 +19,13 @@
   "bugs": {
     "url": "https://github.com/jia1075654056/miniojs/issues"
   },
-  "homepage": "https://github.com/jia1075654056/miniojs#readme"
+  "homepage": "https://github.com/jia1075654056/miniojs#readme",
+  "dependencies": {
+    "minio": "^7.1.1",
+    "node-polyfill-webpack-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
 }
