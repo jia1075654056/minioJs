@@ -29,39 +29,40 @@ const Minio = require("minio");
 // );
 // };
 
-function initMinio(MinioConfig) {
-  if (!MinioConfig) {
-    throw new Error("MinioConfig is error!");
-  }
-  console.log("init");
-  return new Minio.Client(MinioConfig);
-}
+// function initMinio(MinioConfig) {
+//   if (!MinioConfig) {
+//     throw new Error("MinioConfig is error!");
+//   }
+//   console.log("init");
+//   return new Minio.Client(MinioConfig);
+// }
 
-function putObject({
-  minioClient,
-  bucketNmae,
-  file,
-  fileName,
-  size,
-  callback,
-}) {
-  const fileStream = Buffer.from(file);
-  minioClient.putObject(
-    bucketNmae,
-    fileName,
-    fileStream,
-    size,
-    callback ||
-      function (err, objInfo) {
-        if (err) {
-          return console.log(err); // err should be null
-        }
-        console.log("Success", objInfo);
-      }
-  );
-}
+// function putObject({
+//   minioClient,
+//   bucketNmae,
+//   file,
+//   fileName,
+//   size,
+//   callback,
+// }) {
+//   const fileStream = Buffer.from(file);
+//   minioClient.putObject(
+//     bucketNmae,
+//     fileName,
+//     fileStream,
+//     size,
+//     callback ||
+//       function (err, objInfo) {
+//         if (err) {
+//           return console.log(err); // err should be null
+//         }
+//         console.log("Success", objInfo);
+//       }
+//   );
+// }
 
 module.exports = {
-  initMinio,
-  putObject,
+  // initMinio,
+  // putObject,
+  Minio
 };
